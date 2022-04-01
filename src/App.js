@@ -1,5 +1,6 @@
 import React, { Component} from "react";
 import "./App.css";
+import QtoCusta from "./QtoCusta";
 import TheFridayQuestion from "./theFridayQuestion";
 
 class App extends Component{
@@ -8,6 +9,11 @@ class App extends Component{
       <div className="App">
         <h1>Osizo Dojo!</h1>
         <TheFridayQuestion />
+        <br />
+        <hr />
+        <br />
+        <QtoCusta />
+        <br />
       </div>
     );
   }

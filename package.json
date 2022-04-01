@@ -26,7 +26,7 @@
   },
   "scripts": {
     "minify": "npx terser -c -m -o out/like_button.min.js -- out/like_button.js",
-    "test-features": "npx cucumber-js",
+    "test": "npx cucumber-js",
     "dev": "npx webpack-dev-server --mode development",
     "build": "npx webpack --mode development",
     "clean-node-modules": "rm -rf node_modules && yarn"
