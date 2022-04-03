@@ -18,22 +18,3 @@ Then('I should be told {string}', function (expectedAnswer) {
 
 
 
-
-
-Given('qtd is {string}', function (givenQtd) {
-  this.qtd = givenQtd;
-});
-
-Given('price is {string}', function (givenPrice) {
-  this.price = givenPrice;
-});
-
-When('I ask Qto Custa?', function () {
-  this.actualAnswer = calculate(this.qtd, this.price);
-});
-
-Then('I really should be told {float}', function (expectedAnswer) {
-
-  assert.strictEqual(this.actualAnswer, expectedAnswer)
-});
-
