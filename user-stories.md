@@ -12,7 +12,7 @@ Acceptance Criteria
 
 # Igual o QQEC
 - [ ] pega título, quantidade e preço e retorna o preço por litro (ou quilo)
-    - [ ] Resultado deve ser 
+    - [X] Resultado deve ser 
     ```
     nome do produto: $ 0.00
     ```
@@ -31,6 +31,7 @@ Acceptance Criteria
     - exibir ambos os resultados
 - lembrar os resultados anteriores  
     - mostrar em algum lugar, separado por data
+- fazer todos os campos serem required
 
 
 ---
