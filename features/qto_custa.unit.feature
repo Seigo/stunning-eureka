@@ -1,7 +1,7 @@
 Feature: Qto custa?
   Everybody wants to know qto custa?
 
-  Scenario Outline: Result should be a simple multiplication
+  Scenario Outline: Result should be a simple multiplication (unit test)
     Given product is "<product>"
     Given qtd is "<qtd>"
     Given price is "<price>"

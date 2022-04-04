@@ -6,7 +6,7 @@ import TheFridayQuestion from "./theFridayQuestion";
 class App extends Component{
   render(){
     return(
-      <div className="App">
+      <div className="App" name="app-root">
         <h1>Osizo Dojo!</h1>
         <TheFridayQuestion />
         <br />

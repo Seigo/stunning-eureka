@@ -17,3 +17,15 @@ Some package versions might be a bit old (webpack) or deprecated (react-hot-load
 6. Upload the assets, generated at `build`, to the release on Github
 7. Publish the release
 8. DONE! Verify the updated website at https://seigo.github.io/stunning-eureka 
+
+
+# Automated testing
+
+Maybe we can use `bdd-webdriver` repo as inspiration
+
+```
+docker run -p 4444:4444 -p 7900:7900 --shm-size="2g" selenium/standalone-firefox:4.1.3-20220327
+```
+
+Note: add `-d` right after `run` to make it detached
+
