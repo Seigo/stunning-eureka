@@ -1,13 +1,30 @@
 'use strict';
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { calculate } from "./core/qtoCusta";
 
 function QtoCusta() {
   const [produto, setProduto] = useState('');
   const [qtd, setQtd] = useState('');
   const [price, setPrice] = useState('');
-  const [answer, setAnswer] = useState('');
+  const [answer, setAnswer] = useState([]);
+  const [answerList, setAnswerList] = useState(null);
+  useEffect(function () {
+    console.log("alguma coisa")
+    setAnswerList ((
+      <div>
+        {answer.map(function (x) {
+          return (
+            <div>
+              <span>{x}</span> <br />
+            </div>
+          )
+        })}
+      </div>
+    ))
+  },
+    [answer]
+  )
 
   return (
     <div>
@@ -29,10 +46,16 @@ function QtoCusta() {
         value={price} 
         onChange={(v) => setPrice(v.target.value)} 
       />
-      <button onClick={() => setAnswer(calculate(produto, qtd, price))}>
+      <button onClick={() => {
+        let resultsList = [...answer, calculate(produto, qtd, price)];
+        setAnswer(resultsList)
+        }}>
+
         Results?
       </button>
-      <span>{answer}</span>
+      <br />
+
+      <span>{answerList}</span>
     </div>
   );
 }
