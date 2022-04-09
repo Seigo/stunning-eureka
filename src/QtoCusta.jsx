@@ -34,13 +34,13 @@ function QtoCusta() {
         value={produto} 
         onChange={(v) => setProduto(v.target.value)} 
       />
-      <span>qtd</span>
+      <span>  qtd em ml ou g</span>
       <input 
         type='text' 
         value={qtd} 
         onChange={(v) => setQtd(v.target.value)} 
       />
-      <span>price</span>
+      <span>  price</span>
       <input 
         type='text' 
         value={price} 
@@ -51,7 +51,7 @@ function QtoCusta() {
         setAnswer(resultsList)
         }}>
 
-        Results?
+          Results?
       </button>
       <br />
 

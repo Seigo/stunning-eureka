@@ -16,9 +16,16 @@ Acceptance Criteria
     ```
     nome do produto: $ 0.00
     ```
-    - [ ] Pega esse resultado e mostra em uma lista
+    - [X] Pega esse resultado e mostra em uma lista
+    - [X] Retorna o preço por litro ou quilo
 ## Título aceita qualquer valor
-## Campos "Quantidade" e "Preço" só podem aceitar floats   
+- é required
+- tem que ter um caractere no mínimo
+- qualquer caractere é aceito
+## Campos "Quantidade"
+- aceita apenas números inteiros
+## "Preço"
+- aceita floats   
 - campo começa com 0.00
     - cada número novo é inserido pela direita
 - esses inputs só aceitam números (floats)
