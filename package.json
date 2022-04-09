@@ -1,6 +1,6 @@
 {
   "name": "stunning-eureka",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "repository": "git@github.com:Seigo/stunning-eureka.git",
   "author": "Osizo LTDA <osizo.ltda@gmail.com>",
@@ -28,7 +28,7 @@
     "minify": "npx terser -c -m -o out/like_button.min.js -- out/like_button.js",
     "test": "npx cucumber-js",
     "dev": "npx webpack-dev-server --mode development",
-    "build": "npx webpack --mode development",
+    "build": "npx webpack --mode production",
     "clean-node-modules": "rm -rf node_modules && yarn"
   }
 }
