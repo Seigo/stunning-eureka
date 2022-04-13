@@ -36,9 +36,13 @@ function QtoCusta() {
       />
       <span>  qtd em ml ou g</span>
       <input 
-        type='text' 
+        type='number'
         value={qtd} 
-        onChange={(v) => setQtd(v.target.value)} 
+        onChange={(v) => {
+          let banana = v.target.value.replace('.', '')
+          setQtd(banana)
+        
+        }} 
       />
       <span>  price</span>
       <input 

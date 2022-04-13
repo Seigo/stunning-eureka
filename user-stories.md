@@ -25,23 +25,30 @@ Acceptance Criteria
 ## Campos "Quantidade"
 - [X] aceita apenas números inteiros
 - [X] se inserir qualquer outra coisa, avisa que não pode quando apertar o botão
+- [ ] é required
 ## "Preço"
-- aceita floats   
-- campo começa com 0.00
-    - cada número novo é inserido pela direita
-- esses inputs só aceitam números (floats)
-- ponto é adicionado automaticamente
-## Retorna o preço real por quilo com 2 decimais
-## Apaga os valores inseridos nos input fields
-- a nao ser que algum campo não foi preenchido
-    - mostra o aviso [field] is required e não apaga os campos que já foram preenchidos          
-
+- [ ] é required
+ 
 
 # UI stuff
 ## Campos "Quantidade"
-- [ ] apaga pontos e virgulas (nice to have)
+- [X] só aceita números
+- [X] apaga pontos e virgulas (nice to have)
 - [ ] avisa que não pode ter pontos e vírgulas (nice to have)
+- [X] esse input só aceita números
 
+## Campos "Preço"
+- [ ] campo começa com 0.00
+    - [ ] cada número novo é inserido pela direita
+    - [ ] ponto é adicionado automaticamente
+- [ ] esse input só aceita números
+
+## Quando apertar o botão
+- [ ] Retorna o preço real por quilo com 2 decimais
+- [ ] Apaga os valores inseridos nos input fields
+    - a nao ser que algum campo não foi preenchido:
+    -   [ ] mostra o aviso [field] is required do lado do botão 
+    -   [ ] não apaga os campos que já foram preenchidos          
 
 # Extra features
 - calcular preço por pound
