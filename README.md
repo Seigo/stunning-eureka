@@ -21,11 +21,33 @@ Some package versions might be a bit old (webpack) or deprecated (react-hot-load
 
 # Automated testing
 
-Maybe we can use `bdd-webdriver` repo as inspiration
+## Unit testing
+
+Run `yarn test`
+
+## e2e testing (Selenium)
+
+1. Make sure docker is running
+2. On the project's root folder
+3. Run `yarn selenium:<windows|mac-m1>` 
+4. Run `yarn dev`
+5. Verify your local IP address and apply that on the e2e Step Definitions file
+6. Run the tests with `yarn e2e`
+  - While Selenium and Dev Server are running, you can repeat e2e tests at will
+  - If your local IP changes (could change if machine is restarted), apply that on the e2e Step Definitions
+
+--
+
+Reference: https://github.com/seleniumhq/docker-selenium/#quick-start
 
 ```
-docker run -p 4444:4444 -p 7900:7900 --shm-size="2g" selenium/standalone-firefox:4.1.3-20220327
+docker run -d -p 4444:4444 -p 7900:7900 --shm-size="2g" selenium/standalone-firefox:4.1.3-20220327
 ```
 
 Note: add `-d` right after `run` to make it detached
 
+
+Chromium for arm64:
+```
+docker run -p 4444:4444 -p 7900:7900 --shm-size="2g" seleniarm/standalone-firefox:4.1.2-20220227
+```
