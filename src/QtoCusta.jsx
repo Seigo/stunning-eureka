@@ -30,12 +30,14 @@ function QtoCusta() {
     <div>
       <span>Produto</span>
       <input 
+        name="product"
         type='text' 
         value={produto} 
         onChange={(v) => setProduto(v.target.value)} 
       />
       <span>  qtd em ml ou g</span>
       <input 
+        name="qtd"
         type='number'
         value={qtd} 
         onChange={(v) => {
@@ -46,20 +48,27 @@ function QtoCusta() {
       />
       <span>  price</span>
       <input 
+        name="price"
         type='text' 
         value={price} 
         onChange={(v) => setPrice(v.target.value)} 
       />
-      <button onClick={() => {
-        let resultsList = [...answer, calculate(produto, qtd, price)];
-        setAnswer(resultsList)
-        }}>
-
-          Results?
+      <button
+        name="submit-button"
+        onClick={() => {
+          let resultsList = [...answer, calculate(produto, qtd, price)];
+          setAnswer(resultsList)
+        }}
+      >
+        Results?
       </button>
       <br />
 
-      <span>{answerList}</span>
+      <span
+        name="results-list"
+      >
+        {answerList}
+      </span>
     </div>
   );
 }
