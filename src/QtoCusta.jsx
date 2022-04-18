@@ -8,23 +8,7 @@ function QtoCusta() {
   const [qtd, setQtd] = useState('');
   const [price, setPrice] = useState('');
   const [answer, setAnswer] = useState([]);
-  const [answerList, setAnswerList] = useState(null);
-  useEffect(function () {
-    console.log("alguma coisa")
-    setAnswerList ((
-      <div>
-        {answer.map(function (x) {
-          return (
-            <div>
-              <span>{x}</span> <br />
-            </div>
-          )
-        })}
-      </div>
-    ))
-  },
-    [answer]
-  )
+  
 
   return (
     <div>
@@ -64,11 +48,13 @@ function QtoCusta() {
       </button>
       <br />
 
-      <span
-        name="results-list"
+      <ul
+        class="results-list"
       >
-        {answerList}
-      </span>
+        {Array.isArray(answer) && answer.map(x => (
+          <li>{x}</li>
+        ))}
+      </ul>
     </div>
   );
 }
