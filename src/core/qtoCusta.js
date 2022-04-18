@@ -1,5 +1,5 @@
 function calculate(product, qtd, price) {
-if (product === "") {
+  if (product === "") {
   console.log('Product name is required')
   return "ERROR: Product name is required"
 }
@@ -7,6 +7,16 @@ if (product === "") {
 else if (qtd.includes(".", ",") || isNaN(qtd)) {
   console.log("Qtd has to be an integer")
   return "ERROR: Qtd has to be an integer"
+}
+
+else if(qtd === "") {
+  console.log("Qtd is required")
+  return "ERROR: Qtd is required"
+}
+
+else if(price === "") {
+  console.log("Price is required")
+  return "ERROR: Price is required"
 }
 
 else {

@@ -19,3 +19,6 @@ Feature: Qto custa?
     | 🎉      | 10         | 0.2        |  🎉: $ 20.00                 |
     | f       | 10.2       | 0.2        | ERROR: Qtd has to be an integer      |
     | g       | aaaa       | 0.2        | ERROR: Qtd has to be an integer      |
+    | h       |            | 0.2        | ERROR: Qtd is required               |
+    | i       | 12         |            | ERROR: Price is required             |
+        

@@ -25,9 +25,9 @@ Acceptance Criteria
 ## Campos "Quantidade"
 - [X] aceita apenas números inteiros
 - [X] se inserir qualquer outra coisa, avisa que não pode quando apertar o botão
-- [ ] é required
+- [X] é required
 ## "Preço"
-- [ ] é required
+- [X] é required
  
 
 # UI stuff
@@ -51,12 +51,13 @@ Acceptance Criteria
     -   [ ] não apaga os campos que já foram preenchidos          
 
 # Extra features
+- quando no mobile, abrir teclado numerico nos campos qtd e price
 - calcular preço por pound
     -  ter a opção de usar métrico ou retard
     - exibir ambos os resultados
 - lembrar os resultados anteriores  
     - mostrar em algum lugar, separado por data
-- fazer todos os campos serem required
+
 
 
 ---
