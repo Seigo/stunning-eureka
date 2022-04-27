@@ -7,7 +7,7 @@ const capabilities = Capabilities.firefox();
 const BROWSER_URL = "http://localhost:4444";
 let driver;
 
-Given('is selenium test', async () => {
+Given('is selenium test', async function () {
   driver = new Builder()
     .usingServer(BROWSER_URL)   
     .withCapabilities(capabilities)
@@ -22,6 +22,16 @@ Given('is selenium test', async () => {
     await driver.quit();
   }
 });
+
+Given('QCEC is open', async function () {
+  try {
+    console.log('QCEC is trying to open');
+    await driver.get('http://192.168.1.70:3000/');
+  } catch(e) {
+    console.log('QCEC is not open', e);
+    await driver.quit();
+  }
+})
 
 AfterAll(async function(){
   if (driver && typeof driver.quit === 'function') {
