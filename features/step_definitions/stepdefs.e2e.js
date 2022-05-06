@@ -33,6 +33,20 @@ Given('QCEC is open', async function () {
   }
 })
 
+Given('selenium product is {string}', async function (givenProduct) {
+  // pega o qe vem do .feature e coloca no campo html de nome "produto"  
+  let product = await driver.findElement(By.name("product"))
+  await product.sendKeys(givenProduct);
+  // no campo product, o value agora eh banana
+  console.log("productoooo: ", await product.getAttribute("value"))
+})
+
+
+
+Then('title should be {string}', async function (expectedAnswer) {
+  assert.strictEqual(await driver.getTitle(), expectedAnswer)
+})
+
 AfterAll(async function(){
   if (driver && typeof driver.quit === 'function') {
     await driver.quit();
